@@ -3,8 +3,8 @@ import NotFoundPage from '../../Assets/Image/404.jpg'
 
 const NotFound = () => {
     return (
-        <div className='flex justify-center'>
-            <img className='w-2/4' src={NotFoundPage} alt="" />
+        <div className='flex justify-center w-full'>
+            <img className='w-3/5' src={NotFoundPage} alt="" />
         </div>
     );
 };
