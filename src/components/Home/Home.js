@@ -10,20 +10,21 @@ const Home = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-2 mt-12'>
-                <div className=" ml-16 flex items-center ">
+            <div className='grid grid-cols-1 md:grid-cols-2 md:mt-12'>
+                <div className=" md:ml-16 flex items-center p-4 md:p-0 order-2">
                     <div>
-                        <h1 className='text-4xl font-bold'>This is the Headphone reviews site</h1>
-                        <p className='mt-4 text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sapiente tenetur amet assumenda praesentium alias inventore iusto quo atque nisi aperiam dolore consectetur corrupti neque, incidunt officia qui tempore perspiciatis quaerat, iure fugiat. Cupiditate molestias, praesentium expedita fugiat pariatur vitae?</p>
+                        <h1 className='text-4xl font-bold'>The best headphone for ever.</h1>
+                        <p className='mt-4 text-xl'>It is a very high-performance wireless Bluetooth headphones in rose gold, Compatible with iOS and Android devices, With fast fuel, 5 minutes of charging gives you 3 hours of playback when the battery is low.</p>
+                        <button className='bg-sky-700 px-6 py-2 text-white font-bold rounded-md hover:text-black mt-6'>Live Demo</button>
                     </div>
                 </div>
-                <div className="flex items-center justify-center">
-                    <img className='w-[500px] h-[500px] rounded-lg' src={image} alt="headphone_image" />
+                <div className="flex items-center justify-center order-1 md:order-3">
+                    <img className='md:w-[500px] md:h-[500px] p-4 rounded-lg' src={image} alt="headphone_image" />
                 </div>
             </div>
             <div className='my-10'>
                 <h2 className='text-center text-2xl font-bold'>Customer Reviews 3</h2>
-                <div className='grid grid-cols-3 gap-6 mt-12 mx-16'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 mx-16'>
                     {
                         reviews.slice(0, 3).map(review => <Review key={review.id} review={review}></Review>)
                     }
